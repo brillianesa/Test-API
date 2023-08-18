@@ -49,4 +49,10 @@ public class EmployeeServicesImpl implements EmployeeServices<Employee> {
             return false;
         }
     }
+
+    @Override
+    public Integer findIdByPhoneNumber(String phonenumber) {
+        return employeeRepository.findIdByPhoneNumber(phonenumber);
+    }
+
 }

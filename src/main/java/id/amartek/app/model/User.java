@@ -23,7 +23,7 @@ public class User {
 
     @OneToOne
     @JoinColumn(name = "id")
-    @MapsId
+    // @MapsId
     private Employee employee;
 
     public Role getRole() {

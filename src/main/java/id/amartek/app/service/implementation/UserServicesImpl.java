@@ -21,12 +21,8 @@ public class UserServicesImpl implements UserServices<User> {
 
     @Override
     public Boolean Save(User user) {
-        try {
-            userRepository.save(user);
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
+        userRepository.save(user);
+        return userRepository.findById(user.getId()).isPresent();
 
     }
 
